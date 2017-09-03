@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteBase /images/
-RewriteRule ^([^\.]+)\.jpg$ /images/$1.html [NC,L]
+RewriteRule ^([^\.]+)\.jpg$ ^([^\.]+)\.html [NC,L]
