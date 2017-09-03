@@ -1,4 +1,7 @@
+
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
 RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)\.html$ $1.jpg [L]
+RewriteBase /images
+
+RewriteRule ^([^.]+)\.html$ /images/$1.jpg [R=301,L,NC]
